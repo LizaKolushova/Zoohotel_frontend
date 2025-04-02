@@ -1,0 +1,28 @@
+.wrapper {
+    max-width: 1330px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: Inter;
+}
+
+button {
+    font-family: Inter;
+}
+
+.page-header {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+}
+
+.page-header_auth {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
