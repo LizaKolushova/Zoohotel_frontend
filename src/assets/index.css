@@ -26,3 +26,9 @@ button {
 a {
     text-decoration: none;
 }
+
+.el-table {
+    margin-top: 36px;
+    --el-table-header-bg-color: var(--el-fill-color-lighter);
+    --el-fill-color-lighter: var(--el-fill-color-light);
+}

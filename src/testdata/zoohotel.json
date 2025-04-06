@@ -1,0 +1,380 @@
+{
+    "organizations": [
+        { "id": 1, "name": "ZooHotel", "email": "contact@zoohotel.com" }
+    ],
+    "hotels": [
+        {
+            "id": 1,
+            "organization_id": 1,
+            "name": "Зоогостиница Лапки",
+            "address": "ул. Лесная, д. 5",
+            "phone": "+7 900 123 4567"
+        }
+    ],
+    "animal_types": [
+        { "id": 1, "name": "Кошка" },
+        { "id": 2, "name": "Собака" },
+        { "id": 3, "name": "Попугай" }
+    ],
+    "hotel_restrictions": [
+        { "id": 1, "hotel_id": 1, "animal_type_id": 1, "max_count": 10 }
+    ],
+    "hotel_pricing": [
+        {
+            "id": 1,
+            "name": "Стандарт",
+            "hotel_id": 1,
+            "restriction_id": 1,
+            "price": 1500.0
+        }
+    ],
+    "clients": [
+        {
+            "id": 1,
+            "last_name": "Иванов",
+            "first_name": "Петр",
+            "middle_name": "Сергеевич",
+            "phone": "+7 900 555 3333",
+            "email": "ivanov@example.com"
+        },
+        {
+            "id": 2,
+            "last_name": "Петров",
+            "first_name": "Алексей",
+            "middle_name": "Викторович",
+            "phone": "+7 900 111 2222",
+            "email": "petrov@example.com"
+        },
+        {
+            "id": 3,
+            "last_name": "Смирнова",
+            "first_name": "Анна",
+            "middle_name": "Игоревна",
+            "phone": "+7 900 333 4444",
+            "email": "smirnova@example.com"
+        },
+        {
+            "id": 4,
+            "last_name": "Кузнецов",
+            "first_name": "Михаил",
+            "middle_name": "Дмитриевич",
+            "phone": "+7 900 555 6666",
+            "email": "kuznetsov@example.com"
+        },
+        {
+            "id": 5,
+            "last_name": "Васильева",
+            "first_name": "Екатерина",
+            "middle_name": "Андреевна",
+            "phone": "+7 900 777 8888",
+            "email": "vasilieva@example.com"
+        },
+        {
+            "id": 6,
+            "last_name": "Николаев",
+            "first_name": "Григорий",
+            "middle_name": "Олегович",
+            "phone": "+7 900 999 0000",
+            "email": "nikolaev@example.com"
+        },
+        {
+            "id": 7,
+            "last_name": "Фёдорова",
+            "first_name": "Марина",
+            "middle_name": "Сергеевна",
+            "phone": "+7 901 222 3333",
+            "email": "fedorova@example.com"
+        },
+        {
+            "id": 8,
+            "last_name": "Морозов",
+            "first_name": "Даниил",
+            "middle_name": "Романович",
+            "phone": "+7 901 444 5555",
+            "email": "morozov@example.com"
+        },
+        {
+            "id": 9,
+            "last_name": "Соколова",
+            "first_name": "Ирина",
+            "middle_name": "Валентиновна",
+            "phone": "+7 901 666 7777",
+            "email": "sokolova@example.com"
+        },
+        {
+            "id": 10,
+            "last_name": "Тихонов",
+            "first_name": "Артем",
+            "middle_name": "Владимирович",
+            "phone": "+7 901 888 9999",
+            "email": "tikhonov@example.com"
+        }
+    ],
+    "animals": [
+        {
+            "id": 1,
+            "animal_type_id": 1,
+            "client_id": 1,
+            "name": "Барсик",
+            "breed": "Персидская",
+            "birth_date": "2020-06-15",
+            "gender": "male",
+            "weight": 4.5,
+            "color": "Рыжий",
+            "description": "Любит играть",
+            "sterilized": true
+        },
+        {
+            "id": 2,
+            "animal_type_id": 2,
+            "client_id": 2,
+            "name": "Рекс",
+            "breed": "Немецкая овчарка",
+            "birth_date": "2019-03-22",
+            "gender": "male",
+            "weight": 30,
+            "color": "Черный",
+            "description": "Дрессированный",
+            "sterilized": false
+        },
+        {
+            "id": 3,
+            "animal_type_id": 1,
+            "client_id": 3,
+            "name": "Мурка",
+            "breed": "Сиамская",
+            "birth_date": "2021-08-11",
+            "gender": "female",
+            "weight": 3.2,
+            "color": "Белая с пятнами",
+            "description": "Ласковая",
+            "sterilized": true
+        },
+        {
+            "id": 4,
+            "animal_type_id": 3,
+            "client_id": 4,
+            "name": "Кеша",
+            "breed": "Ара",
+            "birth_date": "2018-12-05",
+            "gender": "male",
+            "weight": 1.1,
+            "color": "Синий",
+            "description": "Говорящий попугай",
+            "sterilized": false
+        },
+        {
+            "id": 5,
+            "animal_type_id": 2,
+            "client_id": 5,
+            "name": "Бобик",
+            "breed": "Такса",
+            "birth_date": "2022-01-30",
+            "gender": "male",
+            "weight": 5.6,
+            "color": "Коричневый",
+            "description": "Очень энергичный",
+            "sterilized": false
+        },
+        {
+            "id": 6,
+            "animal_type_id": 1,
+            "client_id": 6,
+            "name": "Снежок",
+            "breed": "Шотландская вислоухая",
+            "birth_date": "2023-02-14",
+            "gender": "male",
+            "weight": 4.2,
+            "color": "Белый",
+            "description": "Любит спать на коленях",
+            "sterilized": false
+        },
+        {
+            "id": 7,
+            "animal_type_id": 2,
+            "client_id": 7,
+            "name": "Луна",
+            "breed": "Хаски",
+            "birth_date": "2020-10-10",
+            "gender": "female",
+            "weight": 25.3,
+            "color": "Серо-белый",
+            "description": "Любит бегать",
+            "sterilized": true
+        },
+        {
+            "id": 8,
+            "animal_type_id": 2,
+            "client_id": 8,
+            "name": "Чико",
+            "breed": "Такса",
+            "birth_date": "2017-06-06",
+            "gender": "male",
+            "weight": 12.9,
+            "color": "Коричневый",
+            "description": "Поет мелодии",
+            "sterilized": false
+        },
+        {
+            "id": 9,
+            "animal_type_id": 1,
+            "client_id": 9,
+            "name": "Майя",
+            "breed": "Британская",
+            "birth_date": "2019-09-09",
+            "gender": "female",
+            "weight": 3.8,
+            "color": "Голубой",
+            "description": "Очень независимая",
+            "sterilized": true
+        },
+        {
+            "id": 10,
+            "animal_type_id": 2,
+            "client_id": 10,
+            "name": "Шарик",
+            "breed": "Лабрадор",
+            "birth_date": "2018-05-01",
+            "gender": "male",
+            "weight": 32.5,
+            "color": "Золотистый",
+            "description": "Добрый и игривый",
+            "sterilized": false
+        }
+    ],
+    "roles": [
+        {
+            "id": 1,
+            "name": "Администратор",
+            "description": "Управление системой"
+        }
+    ],
+    "permissions": [
+        {
+            "id": 1,
+            "name": "Управление бронированиями",
+            "description": "Позволяет управлять бронированиями"
+        }
+    ],
+    "role_permissions": [{ "id": 1, "role_id": 1, "permission_id": 1 }],
+    "system_users": [
+        {
+            "id": 1,
+            "last_name": "Сидоров",
+            "first_name": "Андрей",
+            "middle_name": "Николаевич",
+            "username": "admin",
+            "password": "hashed_password",
+            "role_id": 1,
+            "phone": "+7 900 111 2233",
+            "email": "admin@zoohotel.com"
+        }
+    ],
+    "animal_passports": [
+        {
+            "id": 1,
+            "animal_id": 1,
+            "last_vet_visit": "2024-01-10",
+            "vet_visit_reason": "Плановый осмотр",
+            "chronic_diseases": "Нет",
+            "past_diseases": "Нет",
+            "vet_contact": "Клиника ВетДоктор",
+            "health_notes": "Здоров"
+        }
+    ],
+    "vaccinations": [
+        {
+            "id": 1,
+            "animal_id": 1,
+            "vaccination_date": "2023-12-20",
+            "vaccination_name": "Вакцина от бешенства"
+        }
+    ],
+    "treatments": [
+        {
+            "id": 1,
+            "animal_id": 1,
+            "treatment_date": "2024-03-05",
+            "treatment_type": "Обработка от паразитов",
+            "description": "Препарат Фронтлайн"
+        }
+    ],
+    "bookings": [
+        {
+            "id": 1,
+            "client_id": 1,
+            "hotel_id": 1,
+            "pricing_id": 1,
+            "start_date": "2025-04-01T14:00:00",
+            "end_date": "2025-04-10T12:00:00",
+            "status": "pending",
+            "total_price": 15000.0
+        }
+    ],
+    "additional_services": [
+        {
+            "id": 1,
+            "name": "Стрижка",
+            "description": "Груминг для животных",
+            "price": 2000.0
+        }
+    ],
+    "booking_additional_services": [
+        { "id": 1, "booking_id": 1, "service_id": 1, "quantity": 1 }
+    ],
+    "accommodation": [
+        {
+            "id": 1,
+            "animal_id": 1,
+            "booking_id": 1,
+            "check_in_date": "2025-04-01T14:00:00",
+            "check_out_date": "2025-04-10T12:00:00"
+        }
+    ],
+    "accommodation_additional_services": [
+        { "id": 1, "accommodation_id": 1, "service_id": 1, "quantity": 1 }
+    ],
+    "service_records": [
+        {
+            "id": 1,
+            "animal_id": 1,
+            "user_id": 1,
+            "accommodation_service_id": 1,
+            "service_date": "2025-04-02",
+            "service_time": "10:00:00",
+            "repeat_count": 0,
+            "notes": "Выполнено успешно"
+        }
+    ],
+    "task_types": [
+        {
+            "id": 1,
+            "name": "Кормление",
+            "description": "Кормление животных",
+            "category": "Уход",
+            "duration": 10
+        }
+    ],
+    "task_records": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "task_type_id": 1,
+            "task_date": "2025-04-02",
+            "task_time": "08:00:00",
+            "repeat_count": 1,
+            "notes": "Кошка покормлена"
+        }
+    ],
+    "notification_types": [{ "id": 1, "name": "Напоминание о бронировании" }],
+    "notifications": [
+        {
+            "id": 1,
+            "notification_type_id": 1,
+            "user_id": 1,
+            "message": "Напоминание: Барсик заезжает 1 апреля",
+            "created_at": "2025-03-25T10:00:00",
+            "status": false
+        }
+    ]
+}

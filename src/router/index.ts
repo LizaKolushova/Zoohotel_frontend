@@ -7,6 +7,7 @@ import LoginView from "@/views/AuthPages/LoginView.vue";
 import RegisterView from "@/views/AuthPages/RegisterView.vue";
 import PasswordRecoveryView from "@/views/AuthPages/PasswordRecoveryView.vue";
 import AuthLayout from "@/views/AuthPages/AuthLayout.vue";
+import ClientForm from "@/views/ClientForm.vue";
 import { useUserStore } from "@/stores/userStore";
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,15 @@ const router = createRouter({
                     path: "clients",
                     name: "clients",
                     component: ClientsView,
+                },
+                {
+                    path: "/clients/create",
+                    component: ClientForm,
+                },
+                {
+                    path: "/clients/:id/edit",
+                    component: ClientForm,
+                    props: true,
                 },
                 {
                     path: "animals",
