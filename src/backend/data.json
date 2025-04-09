@@ -35,6 +35,18 @@
       "hotel_id": 1,
       "animal_type_id": 1,
       "max_count": 10
+    },
+    {
+      "id": 2,
+      "hotel_id": 1,
+      "animal_type_id": 2,
+      "max_count": 5
+    },
+    {
+      "id": 3,
+      "hotel_id": 1,
+      "animal_type_id": 3,
+      "max_count": 2
     }
   ],
   "hotel_pricing": [
@@ -42,7 +54,35 @@
       "id": 1,
       "name": "Стандарт",
       "hotel_id": 1,
+      "restriction_id": 2,
+      "price": 1500
+    },
+    {
+      "id": 2,
+      "name": "Медиум",
+      "hotel_id": 1,
+      "restriction_id": 2,
+      "price": 2000
+    },
+    {
+      "id": 3,
+      "name": "Двухместный",
+      "hotel_id": 1,
       "restriction_id": 1,
+      "price": 1000
+    },
+    {
+      "id": 4,
+      "name": "Стандарт",
+      "hotel_id": 1,
+      "restriction_id": 1,
+      "price": 1500
+    },
+    {
+      "id": 5,
+      "name": "Стандарт",
+      "hotel_id": 1,
+      "restriction_id": 3,
       "price": 1500
     }
   ],
@@ -110,6 +150,70 @@
       "middle_name": "Николаевич",
       "phone": "+7 918 741 8176",
       "email": "danil.mashentsev@mail.ru"
+    },
+    {
+      "id": 12,
+      "last_name": "Петренко",
+      "first_name": "Алексей",
+      "middle_name": "Игоревич",
+      "phone": "+7 927 112 2233",
+      "email": "a.petrenko@example.com"
+    },
+    {
+      "id": 13,
+      "last_name": "Власова",
+      "first_name": "Мария",
+      "middle_name": "Сергеевна",
+      "phone": "+7 903 555 6699",
+      "email": "m.vlasova@example.com"
+    },
+    {
+      "id": 14,
+      "last_name": "Орлов",
+      "first_name": "Илья",
+      "middle_name": "Викторович",
+      "phone": "+7 916 234 5678",
+      "email": "i.orlov@example.com"
+    },
+    {
+      "id": 15,
+      "last_name": "Кузнецова",
+      "first_name": "Елена",
+      "middle_name": "Александровна",
+      "phone": "+7 951 890 1122",
+      "email": "elena.kuz@mail.ru"
+    },
+    {
+      "id": 16,
+      "last_name": "Дьячков",
+      "first_name": "Роман",
+      "middle_name": "Олегович",
+      "phone": "+7 999 765 4321",
+      "email": "roman.dyachkov@yandex.ru"
+    },
+    {
+      "id": 17,
+      "last_name": "Гаврилова",
+      "first_name": "Анна",
+      "middle_name": "Юрьевна",
+      "phone": "+7 930 101 2020",
+      "email": "anna.gavrilova@example.com"
+    },
+    {
+      "id": 18,
+      "last_name": "Семенов",
+      "first_name": "Артем",
+      "middle_name": "Дмитриевич",
+      "phone": "+7 929 313 1415",
+      "email": "artem.s@mail.ru"
+    },
+    {
+      "id": 19,
+      "last_name": "Федорова",
+      "first_name": "Ольга",
+      "middle_name": "Васильевна",
+      "phone": "+7 905 222 3344",
+      "email": "olga.fedorova@mail.ru"
     }
   ],
   "animals": [
@@ -177,6 +281,136 @@
       "color": "Голубой",
       "description": "Очень независимая",
       "sterilized": true
+    },
+    {
+      "id": 10,
+      "animal_type_id": 1,
+      "client_id": 10,
+      "name": "Луна",
+      "breed": "Русская голубая",
+      "birth_date": "2020-04-15",
+      "gender": "female",
+      "weight": 3.5,
+      "color": "Серый",
+      "description": "Тихая и аккуратная",
+      "sterilized": true
+    },
+    {
+      "id": 11,
+      "animal_type_id": 1,
+      "client_id": 11,
+      "name": "Томас",
+      "breed": "Мейн-кун",
+      "birth_date": "2018-11-03",
+      "gender": "male",
+      "weight": 7.2,
+      "color": "Черный с белым",
+      "description": "Очень ласковый, любит детей",
+      "sterilized": false
+    },
+    {
+      "id": 12,
+      "animal_type_id": 1,
+      "client_id": 12,
+      "name": "Жужа",
+      "breed": "Сфинкс",
+      "birth_date": "2021-02-22",
+      "gender": "female",
+      "weight": 2.9,
+      "color": "Розовый с серым",
+      "description": "Обожает тепло",
+      "sterilized": true
+    },
+    {
+      "id": 13,
+      "animal_type_id": 1,
+      "client_id": 13,
+      "name": "Ричи",
+      "breed": "Абиссинская",
+      "birth_date": "2019-12-12",
+      "gender": "male",
+      "weight": 4.0,
+      "color": "Рыжевато-коричневый",
+      "description": "Любит бегать по дому",
+      "sterilized": false
+    },
+    {
+      "id": 14,
+      "animal_type_id": 1,
+      "client_id": 14,
+      "name": "Фрося",
+      "breed": "Шотландская прямоухая",
+      "birth_date": "2022-07-07",
+      "gender": "female",
+      "weight": 3.1,
+      "color": "Серебристый табби",
+      "description": "Пугливая, но добрая",
+      "sterilized": false
+    },
+    {
+      "id": 15,
+      "animal_type_id": 2,
+      "client_id": 15,
+      "name": "Рекс",
+      "breed": "Немецкая овчарка",
+      "birth_date": "2016-09-01",
+      "gender": "male",
+      "weight": 30.5,
+      "color": "Черно-рыжий",
+      "description": "Служебная собака, обучен командам",
+      "sterilized": true
+    },
+    {
+      "id": 16,
+      "animal_type_id": 2,
+      "client_id": 16,
+      "name": "Белла",
+      "breed": "Лабрадор-ретривер",
+      "birth_date": "2020-03-18",
+      "gender": "female",
+      "weight": 28.0,
+      "color": "Шоколадный",
+      "description": "Очень дружелюбная, любит плавать",
+      "sterilized": false
+    },
+    {
+      "id": 17,
+      "animal_type_id": 2,
+      "client_id": 17,
+      "name": "Тузик",
+      "breed": "Дворняга",
+      "birth_date": "2018-08-25",
+      "gender": "male",
+      "weight": 18.3,
+      "color": "Белый с черными пятнами",
+      "description": "Был найден на улице, теперь домашний любимец",
+      "sterilized": true
+    },
+    {
+      "id": 18,
+      "animal_type_id": 2,
+      "client_id": 18,
+      "name": "Симба",
+      "breed": "Шпиц",
+      "birth_date": "2022-05-05",
+      "gender": "male",
+      "weight": 4.2,
+      "color": "Рыжий",
+      "description": "Пушистый и энергичный",
+      "sterilized": false
+    },
+    {
+      "id": 19,
+      "animal_type_id": 2,
+      "client_id": 19,
+      "name": "Грета",
+      "breed": "Хаски",
+      "birth_date": "2019-11-11",
+      "gender": "female",
+      "weight": 24.7,
+      "color": "Серо-белый",
+      "description": "Обожает бег и снег",
+      "sterilized": true
     }
   ],
   "roles": [
@@ -214,44 +448,186 @@
     }
   ],
   "animal_passports": [
-    {
-      "id": 1,
-      "animal_id": 1,
-      "last_vet_visit": "2024-01-10",
-      "vet_visit_reason": "Плановый осмотр",
-      "chronic_diseases": "Нет",
-      "past_diseases": "Нет",
-      "vet_contact": "Клиника ВетДоктор",
-      "health_notes": "Здоров"
-    }
+    { "id": 1, "animal_id": 1, "last_vet_visit": "2024-01-10", "vet_visit_reason": "Плановый осмотр", "chronic_diseases": "Нет", "past_diseases": "Нет", "vet_contact": "Клиника ВетДоктор", "health_notes": "Здоров" },
+    { "id": 2, "animal_id": 1, "last_vet_visit": "2023-07-20", "vet_visit_reason": "Прививка", "chronic_diseases": "Нет", "past_diseases": "Глисты", "vet_contact": "ВетМир", "health_notes": "Требуется профилактика" },
+    { "id": 3, "animal_id": 1, "last_vet_visit": "2022-11-03", "vet_visit_reason": "Ушной клещ", "chronic_diseases": "Нет", "past_diseases": "Клещи", "vet_contact": "Кот и Пёс", "health_notes": "Вылечен" },
+    { "id": 4, "animal_id": 1, "last_vet_visit": "2022-03-15", "vet_visit_reason": "Рвота", "chronic_diseases": "Нет", "past_diseases": "Пищевое отравление", "vet_contact": "ВетДоктор", "health_notes": "Без осложнений" },
+    { "id": 5, "animal_id": 1, "last_vet_visit": "2021-06-01", "vet_visit_reason": "Кастрация", "chronic_diseases": "Нет", "past_diseases": "Нет", "vet_contact": "ЗооКлиника", "health_notes": "Операция прошла успешно" },
+  
+    { "id": 6, "animal_id": 3, "last_vet_visit": "2024-02-18", "vet_visit_reason": "Плановая проверка", "chronic_diseases": "Нет", "past_diseases": "Нет", "vet_contact": "ВетЦентр", "health_notes": "Без отклонений" },
+    { "id": 7, "animal_id": 3, "last_vet_visit": "2023-08-11", "vet_visit_reason": "Прививка", "chronic_diseases": "Нет", "past_diseases": "Нет", "vet_contact": "Котик+", "health_notes": "Всё хорошо" },
+    { "id": 8, "animal_id": 3, "last_vet_visit": "2023-01-22", "vet_visit_reason": "Чихание", "chronic_diseases": "Нет", "past_diseases": "ОРВИ", "vet_contact": "ВетДоктор", "health_notes": "Терапия назначена" },
+    { "id": 9, "animal_id": 3, "last_vet_visit": "2022-05-15", "vet_visit_reason": "Осмотр после стерилизации", "chronic_diseases": "Нет", "past_diseases": "Нет", "vet_contact": "Лапка", "health_notes": "Восстановление хорошее" },
+    { "id": 10, "animal_id": 3, "last_vet_visit": "2021-08-11", "vet_visit_reason": "Первичный осмотр", "chronic_diseases": "Нет", "past_diseases": "Нет", "vet_contact": "Кошки и Ко", "health_notes": "Здорова" },
+  
+    { "id": 11, "animal_id": 6, "last_vet_visit": "2024-03-01", "vet_visit_reason": "Проверка слуха", "chronic_diseases": "Нет", "past_diseases": "Нет", "vet_contact": "Шерстинка", "health_notes": "Слух в норме" },
+    { "id": 12, "animal_id": 6, "last_vet_visit": "2023-11-14", "vet_visit_reason": "Прививка", "chronic_diseases": "Нет", "past_diseases": "Нет", "vet_contact": "МяуДок", "health_notes": "Без осложнений" },
+    { "id": 13, "animal_id": 6, "last_vet_visit": "2023-06-20", "vet_visit_reason": "Рвота", "chronic_diseases": "Нет", "past_diseases": "Несварение", "vet_contact": "ВетДоктор", "health_notes": "Прописан диетический корм" },
+    { "id": 14, "animal_id": 6, "last_vet_visit": "2023-03-15", "vet_visit_reason": "Проверка шерсти", "chronic_diseases": "Нет", "past_diseases": "Нет", "vet_contact": "ЗооДок", "health_notes": "Шерсть густая, блестящая" },
+    { "id": 15, "animal_id": 6, "last_vet_visit": "2023-02-20", "vet_visit_reason": "Первичный осмотр", "chronic_diseases": "Нет", "past_diseases": "Нет", "vet_contact": "Зоомед", "health_notes": "Без патологий" },
+  
+    { "id": 16, "animal_id": 8, "last_vet_visit": "2024-01-15", "vet_visit_reason": "Проблемы с ушами", "chronic_diseases": "Отит", "past_diseases": "Отит", "vet_contact": "ДокТазик", "health_notes": "Назначено лечение" },
+    { "id": 17, "animal_id": 8, "last_vet_visit": "2023-10-10", "vet_visit_reason": "Прививка", "chronic_diseases": "Отит", "past_diseases": "Глисты", "vet_contact": "Вет+Пёс", "health_notes": "Хорошо перенес прививку" },
+    { "id": 18, "animal_id": 8, "last_vet_visit": "2023-05-05", "vet_visit_reason": "Аллергия", "chronic_diseases": "Аллергия на курицу", "past_diseases": "Нет", "vet_contact": "Собака-друг", "health_notes": "Диета назначена" },
+    { "id": 19, "animal_id": 8, "last_vet_visit": "2022-11-20", "vet_visit_reason": "Осмотр", "chronic_diseases": "Нет", "past_diseases": "Блох нет", "vet_contact": "ВетДоктор", "health_notes": "Здоров" },
+    { "id": 20, "animal_id": 8, "last_vet_visit": "2022-01-01", "vet_visit_reason": "Проблемы с кожей", "chronic_diseases": "Нет", "past_diseases": "Дерматит", "vet_contact": "ПёсМед", "health_notes": "Курс завершен" },
+  
+    { "id": 21, "animal_id": 9, "last_vet_visit": "2024-02-12", "vet_visit_reason": "Осмотр", "chronic_diseases": "Нет", "past_diseases": "Нет", "vet_contact": "Лапа", "health_notes": "Без замечаний" },
+    { "id": 22, "animal_id": 9, "last_vet_visit": "2023-09-19", "vet_visit_reason": "Прививка", "chronic_diseases": "Нет", "past_diseases": "ОРВИ", "vet_contact": "Зооцентр", "health_notes": "Температура в норме" },
+    { "id": 23, "animal_id": 9, "last_vet_visit": "2023-03-03", "vet_visit_reason": "Проверка после болезни", "chronic_diseases": "Нет", "past_diseases": "ОРВИ", "vet_contact": "ВетДоктор", "health_notes": "Полное выздоровление" },
+    { "id": 24, "animal_id": 9, "last_vet_visit": "2022-09-09", "vet_visit_reason": "Стерилизация", "chronic_diseases": "Нет", "past_diseases": "Нет", "vet_contact": "Кошка+Док", "health_notes": "Операция успешна" },
+    { "id": 25, "animal_id": 9, "last_vet_visit": "2021-10-10", "vet_visit_reason": "Первичный осмотр", "chronic_diseases": "Нет", "past_diseases": "Нет", "vet_contact": "Лапочка", "health_notes": "Здорова" }
   ],
   "vaccinations": [
-    {
-      "id": 1,
-      "animal_id": 1,
-      "vaccination_date": "2023-12-20",
-      "vaccination_name": "Вакцина от бешенства"
-    }
+    { "id": 1, "animal_id": 1, "vaccination_date": "2023-12-20", "vaccination_name": "Вакцина от бешенства" },
+    { "id": 2, "animal_id": 1, "vaccination_date": "2023-06-10", "vaccination_name": "Комплексная вакцина" },
+    { "id": 3, "animal_id": 1, "vaccination_date": "2022-12-18", "vaccination_name": "Вакцина от кальцивироза" },
+    { "id": 4, "animal_id": 1, "vaccination_date": "2022-06-08", "vaccination_name": "Вакцина от панлейкопении" },
+    { "id": 5, "animal_id": 1, "vaccination_date": "2021-12-15", "vaccination_name": "Повторная вакцинация от бешенства" },
+  
+    { "id": 6, "animal_id": 3, "vaccination_date": "2024-02-01", "vaccination_name": "Вакцина от бешенства" },
+    { "id": 7, "animal_id": 3, "vaccination_date": "2023-08-11", "vaccination_name": "Комплексная вакцина" },
+    { "id": 8, "animal_id": 3, "vaccination_date": "2022-08-11", "vaccination_name": "Вакцина от панлейкопении" },
+    { "id": 9, "animal_id": 3, "vaccination_date": "2021-10-11", "vaccination_name": "Вакцина от кальцивироза" },
+    { "id": 10, "animal_id": 3, "vaccination_date": "2021-09-01", "vaccination_name": "Вакцина от герпесвируса" },
+  
+    { "id": 11, "animal_id": 6, "vaccination_date": "2024-02-28", "vaccination_name": "Комплексная вакцина" },
+    { "id": 12, "animal_id": 6, "vaccination_date": "2023-11-14", "vaccination_name": "Вакцина от бешенства" },
+    { "id": 13, "animal_id": 6, "vaccination_date": "2023-07-14", "vaccination_name": "Вакцина от кальцивироза" },
+    { "id": 14, "animal_id": 6, "vaccination_date": "2023-03-01", "vaccination_name": "Вакцина от панлейкопении" },
+    { "id": 15, "animal_id": 6, "vaccination_date": "2023-02-20", "vaccination_name": "Вакцина от герпесвируса" },
+  
+    { "id": 16, "animal_id": 8, "vaccination_date": "2024-01-10", "vaccination_name": "Вакцина от бешенства" },
+    { "id": 17, "animal_id": 8, "vaccination_date": "2023-10-10", "vaccination_name": "Комплексная вакцина (DHPPiL)" },
+    { "id": 18, "animal_id": 8, "vaccination_date": "2022-10-10", "vaccination_name": "Повторная вакцинация от бешенства" },
+    { "id": 19, "animal_id": 8, "vaccination_date": "2021-10-10", "vaccination_name": "Вакцина от лептоспироза" },
+    { "id": 20, "animal_id": 8, "vaccination_date": "2020-10-10", "vaccination_name": "Вакцина от парагриппа" },
+  
+    { "id": 21, "animal_id": 9, "vaccination_date": "2024-01-30", "vaccination_name": "Вакцина от бешенства" },
+    { "id": 22, "animal_id": 9, "vaccination_date": "2023-09-19", "vaccination_name": "Комплексная вакцина" },
+    { "id": 23, "animal_id": 9, "vaccination_date": "2022-09-19", "vaccination_name": "Вакцина от кальцивироза" },
+    { "id": 24, "animal_id": 9, "vaccination_date": "2021-09-19", "vaccination_name": "Вакцина от панлейкопении" },
+    { "id": 25, "animal_id": 9, "vaccination_date": "2020-09-19", "vaccination_name": "Вакцина от герпесвируса" }
   ],
   "treatments": [
-    {
-      "id": 1,
-      "animal_id": 1,
-      "treatment_date": "2024-03-05",
-      "treatment_type": "Обработка от паразитов",
-      "description": "Препарат Фронтлайн"
-    }
+    { "id": 1, "animal_id": 1, "treatment_date": "2024-03-05", "treatment_type": "Обработка от паразитов", "description": "Препарат Фронтлайн" },
+    { "id": 2, "animal_id": 1, "treatment_date": "2023-12-01", "treatment_type": "Чистка ушей", "description": "Удалены ушные пробки" },
+    { "id": 3, "animal_id": 1, "treatment_date": "2023-06-10", "treatment_type": "Удаление клеща", "description": "Клещ удален, обработка проведена" },
+    { "id": 4, "animal_id": 1, "treatment_date": "2022-10-10", "treatment_type": "Профилактика блох", "description": "Промывание и капли" },
+    { "id": 5, "animal_id": 1, "treatment_date": "2021-12-01", "treatment_type": "Обработка шерсти", "description": "Шампунь от перхоти" },
+  
+    { "id": 6, "animal_id": 3, "treatment_date": "2024-02-18", "treatment_type": "Обработка от глистов", "description": "Дронтал, 1 табл." },
+    { "id": 7, "animal_id": 3, "treatment_date": "2023-08-12", "treatment_type": "Обработка от блох", "description": "Капли на холку" },
+    { "id": 8, "animal_id": 3, "treatment_date": "2023-01-22", "treatment_type": "Назначен ингалятор", "description": "При чихании" },
+    { "id": 9, "animal_id": 3, "treatment_date": "2022-05-16", "treatment_type": "Антибиотики", "description": "Профилактика после стерилизации" },
+    { "id": 10, "animal_id": 3, "treatment_date": "2021-09-01", "treatment_type": "Промывание глаз", "description": "Фурацилин" },
+  
+    { "id": 11, "animal_id": 6, "treatment_date": "2024-03-01", "treatment_type": "Капли в уши", "description": "Профилактика" },
+    { "id": 12, "animal_id": 6, "treatment_date": "2023-11-14", "treatment_type": "Глистогонка", "description": "Празител" },
+    { "id": 13, "animal_id": 6, "treatment_date": "2023-07-01", "treatment_type": "Лечение несварения", "description": "Назначен пробиотик" },
+    { "id": 14, "animal_id": 6, "treatment_date": "2023-03-01", "treatment_type": "Чистка зубов", "description": "Паста Beaphar" },
+    { "id": 15, "animal_id": 6, "treatment_date": "2023-02-20", "treatment_type": "Первичная обработка от блох", "description": "Препарат Стронгхолд" },
+  
+    { "id": 16, "animal_id": 8, "treatment_date": "2024-01-16", "treatment_type": "Лечение отита", "description": "Капли Отоферонол" },
+    { "id": 17, "animal_id": 8, "treatment_date": "2023-10-11", "treatment_type": "Противоглистное", "description": "Каниквантел" },
+    { "id": 18, "animal_id": 8, "treatment_date": "2023-05-06", "treatment_type": "Обработка кожи", "description": "Мазь от раздражения" },
+    { "id": 19, "animal_id": 8, "treatment_date": "2022-11-20", "treatment_type": "Стрижка когтей", "description": "Регулярная гигиена" },
+    { "id": 20, "animal_id": 8, "treatment_date": "2021-11-11", "treatment_type": "Чистка ушей", "description": "Капли с антисептиком" },
+  
+    { "id": 21, "animal_id": 9, "treatment_date": "2024-02-13", "treatment_type": "Обработка от блох", "description": "Фронтлайн" },
+    { "id": 22, "animal_id": 9, "treatment_date": "2023-09-20", "treatment_type": "Чистка зубов", "description": "Паста для кошек" },
+    { "id": 23, "animal_id": 9, "treatment_date": "2023-03-04", "treatment_type": "Терапия после ОРВИ", "description": "Иммуномодуляторы" },
+    { "id": 24, "animal_id": 9, "treatment_date": "2022-09-10", "treatment_type": "Антибиотики после стерилизации", "description": "Цефалексин" },
+    { "id": 25, "animal_id": 9, "treatment_date": "2021-10-11", "treatment_type": "Обработка глаз", "description": "Фурацилин" }
   ],
   "bookings": [
     {
       "id": 1,
-      "client_id": 1,
+      "client_id": 6,
+      "animal_id": 1,
       "hotel_id": 1,
-      "pricing_id": 1,
+      "pricing_id": 4,
       "start_date": "2025-04-01T14:00:00",
       "end_date": "2025-04-10T12:00:00",
+      "status": "confirmed",
+      "total_price": 13500
+    },
+    {
+      "id": 2,
+      "client_id": 6,
+      "animal_id": 3,
+      "hotel_id": 1,
+      "pricing_id": 3,
+      "start_date": "2025-04-05T14:00:00",
+      "end_date": "2025-04-12T12:00:00",
       "status": "pending",
-      "total_price": 15000
+      "total_price": 7000
+    },
+    {
+      "id": 3,
+      "client_id": 6,
+      "animal_id": 6,
+      "hotel_id": 1,
+      "pricing_id": 3,
+      "start_date": "2025-04-03T14:00:00",
+      "end_date": "2025-04-08T12:00:00",
+      "status": "confirmed",
+      "total_price": 5000
+    },
+    {
+      "id": 4,
+      "client_id": 8,
+      "animal_id": 8,
+      "hotel_id": 1,
+      "pricing_id": 1,  
+      "start_date": "2025-04-02T14:00:00",
+      "end_date": "2025-04-09T12:00:00",
+      "status": "confirmed",
+      "total_price": 10500
+    },
+    {
+      "id": 5,
+      "client_id": 9,
+      "animal_id": 9,
+      "hotel_id": 1,
+      "pricing_id": 4,
+      "start_date": "2025-04-06T14:00:00",
+      "end_date": "2025-04-14T12:00:00",
+      "status": "confirmed",
+      "total_price": 12000
+    },
+    {
+      "id": 6,
+      "client_id": 10,
+      "animal_id": 10,
+      "hotel_id": 1,
+      "pricing_id": 4,
+      "start_date": "2025-04-08T14:00:00",
+      "end_date": "2025-04-15T12:00:00",
+      "status": "pending",
+      "total_price": 10500
+    },
+    {
+      "id": 7,
+      "client_id": 11,
+      "animal_id": 11,
+      "hotel_id": 1,
+      "pricing_id": 4,  
+      "start_date": "2025-04-10T14:00:00",
+      "end_date": "2025-04-17T12:00:00",
+      "status": "confirmed",
+      "total_price": 9000
+    },
+    {
+      "id": 8,
+      "client_id": 12,
+      "animal_id": 12,
+      "hotel_id": 1,
+      "pricing_id": 3,  
+      "start_date": "2025-04-12T14:00:00",
+      "end_date": "2025-04-18T12:00:00",
+      "status": "confirmed",
+      "total_price": 6000
     }
   ],
   "additional_services": [
@@ -270,29 +646,12 @@
       "quantity": 1
     }
   ],
-  "accommodation": [
-    {
-      "id": 1,
-      "animal_id": 1,
-      "booking_id": 1,
-      "check_in_date": "2025-04-01T14:00:00",
-      "check_out_date": "2025-04-10T12:00:00"
-    }
-  ],
-  "accommodation_additional_services": [
-    {
-      "id": 1,
-      "accommodation_id": 1,
-      "service_id": 1,
-      "quantity": 1
-    }
-  ],
   "service_records": [
     {
       "id": 1,
       "animal_id": 1,
       "user_id": 1,
-      "accommodation_service_id": 1,
+      "booking_additional_services_id": 1,
       "service_date": "2025-04-02",
       "service_time": "10:00:00",
       "repeat_count": 0,
