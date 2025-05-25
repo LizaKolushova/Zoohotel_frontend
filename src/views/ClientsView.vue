@@ -22,12 +22,15 @@
 
     <el-table class="table" :data="filteredClients" stripe>
         <el-table-column type="selection" width="55" />
-        <el-table-column
-            prop="name"
-            label="ФИО"
-            :formatter="FIOFormatter"
-            width="340"
-        />
+        <el-table-column prop="name" label="ФИО" min-width="300px">
+            <template #default="scope">
+                <router-link
+                    class="client-link"
+                    :to="`/clients/${scope.row.id}`"
+                    >{{ FIOFormatter(scope.row) }}</router-link
+                >
+            </template>
+        </el-table-column>
         <el-table-column prop="phone" label="Номер телефона" width="260" />
         <el-table-column prop="email" label="E-mail" width="280" />
         <el-table-column
@@ -41,6 +44,8 @@
                     class="operation-button"
                     type="primary"
                     icon="Calendar"
+                    tag="router-link"
+                    to="/"
                 ></el-button>
                 <el-button
                     class="operation-button"
@@ -58,6 +63,16 @@
             </template>
         </el-table-column>
     </el-table>
+
+    <div class="pagination">
+        <el-pagination
+            background
+            layout="prev, pager, next, jumper"
+            :total="totalClients"
+            :page-size="pageSize"
+            @current-change="handleCurrentChange"
+        />
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -72,22 +87,35 @@ const size = "large";
 onMounted(async () => {
     await getClientsData();
     await getAnimalsData();
-    console.log(animalsData.value);
 });
 
 const searchFilter = ref<string>("");
 const clientsData = ref<Client[]>([]);
 const animalsData = ref<Animal[]>([]);
+
+const pageSize = 10;
+const currentPage = ref(1);
+const totalClients = computed(() => clientsData.value.length);
+
 const filteredClients = computed(() => {
-    return clientsData.value.filter((client) => {
-        return (
-            !searchFilter.value ||
-            FIOFormatter(client)
-                .toLowerCase()
-                .includes(searchFilter.value.toLowerCase())
+    return clientsData.value
+        .filter((client) => {
+            return (
+                !searchFilter.value ||
+                FIOFormatter(client)
+                    .toLowerCase()
+                    .includes(searchFilter.value.toLowerCase())
+            );
+        })
+        .slice(
+            (currentPage.value - 1) * pageSize,
+            currentPage.value * pageSize
         );
-    });
 });
+
+function handleCurrentChange(val: number) {
+    currentPage.value = val;
+}
 
 async function getAnimalsData() {
     try {
@@ -178,6 +206,15 @@ function deleteAnimal(id: number) {
     height: 24px;
     & + .operation-button {
         margin-left: 8px;
+    }
+}
+
+.client-link {
+    color: var(--el-table-text-color);
+    text-decoration: underline;
+    transition: var(--el-transition-duration);
+    &:hover {
+        text-decoration: none;
     }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <h2 class="page-header page-header_auth">Вход</h2>
+    <h2 class="page-header page-header_auth">Восстановление пароля</h2>
     <el-form
         ref="form"
         :model="passwordRecoveryForm"

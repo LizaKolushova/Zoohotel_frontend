@@ -41,7 +41,7 @@
                 type="tel"
                 @input="formatPhone"
                 maxlength="15"
-                placeholder="(999)999-99-99"
+                placeholder="(999) 999-99-99"
                 ><template #prepend>+7</template></el-input
             >
         </el-form-item>
@@ -56,6 +56,17 @@
             <el-input
                 type="password"
                 v-model="registerForm.password"
+                placeholder="Введите пароль"
+            ></el-input>
+        </el-form-item>
+        <el-form-item
+            label="Подтвердите пароль"
+            prop="password_confirm"
+            required
+        >
+            <el-input
+                type="password"
+                v-model="registerForm.password_confirm"
                 placeholder="Введите пароль"
             ></el-input>
         </el-form-item>
@@ -87,6 +98,7 @@ interface RegisterForm {
     phone: string;
     email: string;
     password: string;
+    password_confirm: string;
 }
 
 const registerFormRef = useTemplateRef<FormInstance>("form");
@@ -98,7 +110,15 @@ const registerForm = reactive<RegisterForm>({
     phone: "",
     email: "",
     password: "",
+    password_confirm: "",
 });
+const validatePass = (rule: any, value: any, callback: any) => {
+    if (value !== registerForm.password) {
+        callback(new Error("Пароли не совпадают"));
+    } else {
+        callback();
+    }
+};
 
 const rules = reactive<FormRules<RegisterForm>>({
     firstName: validationRules.firstName,
@@ -107,6 +127,13 @@ const rules = reactive<FormRules<RegisterForm>>({
     phone: validationRules.phone,
     email: validationRules.email,
     password: validationRules.password,
+    password_confirm: [
+        { required: true, message: "Введите пароль" },
+        {
+            validator: validatePass,
+            trigger: "blur",
+        },
+    ],
 });
 
 async function onSubmit(formEl: FormInstance | null) {

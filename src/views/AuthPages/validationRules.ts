@@ -34,7 +34,7 @@ const validationRules: FormRules = {
     phone: [
         {
             required: true,
-            message: "Введите пароль",
+            message: "Введите номер телефона",
             trigger: "blur",
         },
         {
